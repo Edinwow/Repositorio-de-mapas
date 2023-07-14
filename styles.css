@@ -116,7 +116,7 @@ main .card .map-image {
     border-top-left-radius: 15px;	
     display: flex;
     flex-direction: column;
-    justify-content: bottom;  /* Centering y-axis */
+    justify-content: center;  /* Centering y-axis */
     align-items: center; /* Centering x-axis */
     cursor: pointer;
 }
