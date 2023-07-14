@@ -1,0 +1,293 @@
+:root {
+    --link: #6d88ff;
+
+    --color-1: #ffadad;
+    --color-2: #ffd6a5;
+    --color-3: #fdffb6;
+    --color-4: #caffbf ;
+    --color-5: #9bf6ff;
+    --color-6: #a0c4ff;
+    --color-7: #bdb2ff;
+    --color-8: #ffc6ff;
+
+    --background: #1f2227;
+    --background-middle-contrast: #777;
+    --backgroud-contrast: #fff;
+    --outline: #35383d;
+}
+
+/* Scroll settings */
+body::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+  
+body::-webkit-scrollbar-track {
+    background: var(--background);
+}
+  
+body::-webkit-scrollbar-thumb {
+    background-color: var(--backgroud-contrast);
+    border-radius: 20px;;
+}
+
+/* Reset */  
+* {
+    margin: 0;
+}
+
+.is-hidden {
+    display: none; 
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background: var(--background); 
+  color: var(--backgroud-contrast);
+  font-family: 'Quattrocento Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items :center;
+}
+
+header {
+    width: 600px;
+    margin: 20px auto 20px;
+}
+
+/* Logo */
+header .logo {
+    width: 100%;	
+}
+
+header .search-bar {
+    position: relative;
+    margin-top: 20px;
+}
+
+header .search-bar i {
+    position: absolute;   
+    top: 14px;
+    right: 14px;
+    z-index: -1;
+    color: var(--background-middle-contrast);
+}
+
+/* Search bar */
+header .search-bar input {
+    height: 45px;
+    width: 100%;
+    padding: 5px 40px 5px 10px;
+    border: solid 2px var(--backgroud-contrast);
+    border-radius: 10px;
+    background: none; 
+    color: var(--backgroud-contrast);
+    font-size: 1rem;
+    font-weight: bold;
+    outline: none;    
+}
+
+header .search-bar input:hover ~ i, 
+header .search-bar input:focus ~ i {
+    color: var(--backgroud-contrast);
+}
+
+/* Where the cards are */
+main {
+    width: 600px;
+}
+
+/* Cards */
+main .card {
+    width: 100%;
+    height: 220px;
+    display: flex;
+    margin: 0 auto 20px auto;
+    border-radius: 15px;
+}
+ 
+/* Cards map image */
+main .card .map-image {
+    height: 100%;
+    width: 30%;
+    overflow: hidden;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;	
+    display: flex;
+    flex-direction: column;
+    justify-content: bottom;  /* Centering y-axis */
+    align-items: center; /* Centering x-axis */
+    cursor: pointer;
+}
+  
+main .card .map-image img {
+    width: 100%;
+}
+
+/* Cards map info */
+main .card .map-info {
+    padding: 15px;
+    width: 65%;
+    border: solid 1px var(--outline);
+    border-radius: 15px;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;	
+    border-left: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+}
+
+/* map tile */
+main .card .map-info .title {
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    margin: 0;
+}
+
+/* map author */
+main .card .map-info .author {
+    font-size: 1.3rem;
+    line-height: 1.3rem;
+    margin: 8px 0 0 0;
+}
+
+/* map gender */
+main .card .map-info .gender {
+    font-size: 1rem;
+    line-height: 1.1rem;
+    margin: 4px 0 0 0;
+}
+
+/* map date and stars div */
+main .card .map-info .icons {
+    margin: 8px 0 0 0;
+}
+
+main .card .map-info .icons span, 
+main .card .map-info .icons a {
+    display: flex;
+    margin-bottom: 4px;
+}
+
+main .card .map-info .icons a {
+    color: var(--link);
+    text-decoration: none;
+}
+
+/* Calendar icon */
+main .card .icons .icon i{
+    margin: 0 6px 0 0;
+}
+
+/* Footer */
+footer {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--link);
+}
+
+/* Responsiveness */
+
+@media (max-width:700px) {
+
+    header {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    header .search-bar {
+        width: 100%;
+    }
+    
+    header .search-bar i {
+        top: 12px;
+        font-size: 1.4rem;
+    }
+    
+    /* Search bar */
+    header .search-bar input {
+        font-size: 1.4rem;   
+    }
+
+    /* Where the cards are */
+    main {
+        width: 80%;
+    }
+
+    /* Cards */
+    main .card {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    /* Cards map image */
+    main .card .map-image {
+        width: auto;
+        border-radius: 15px 15px 0 0;
+    }
+    
+    main .card .map-image img {
+        width: 100%;
+    }
+
+    /* Cards map info */
+    main .card .map-info {
+        border: solid 1px var(--outline);
+        border-radius: 0 0 15px 15px;
+        width: calc(100% - 22px);
+        padding: 10px;
+    }
+
+    /* map tile */
+    main .card .map-info .title {
+        font-size: 1.5rem;
+        line-height: 1.3rem;
+    }
+
+    /* map date and stars div */
+    main .card .map-info .icons {
+        flex-direction: column;
+    }
+
+    /* map date */
+    main .card .map-info .calendar-div {
+        margin: 10px 0 0 0;
+    }
+
+    /* Calendar icon */
+    main .card .map-info .calendar-div .calendar {
+        margin: 0 8px;
+    }
+
+    /* map stars div */
+    main .card .map-info .stars-div {
+        margin: 0;         
+    }
+    
+    /* Tooltip hidden */
+    main .card .map-info .stars-div .tooltip-content {
+        top: 0;
+        left: 27%;
+    }
+    
+    /* Club card */
+    main .club {
+        width: 270px;
+        height: 80px;
+    }
+
+    main .club picture img {
+        width: 80px;
+    }
+    
+}
