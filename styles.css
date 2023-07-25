@@ -117,12 +117,13 @@ main .card .map-image {
     display: flex;
     flex-direction: column;
     justify-content: center;  /* Centering y-axis */
-    align-items: center; /* Centering x-axis */
+    align-items: left; /* Centering x-axis */
     cursor: pointer;
 }
   
 main .card .map-image img {
-    width: 100%;
+    width: auto;
+    height: 222px;
 }
 
 /* Cards map info */
@@ -141,8 +142,8 @@ main .card .map-info {
 
 /* map tile */
 main .card .map-info .title {
-    font-size: 1.5rem;
-    line-height: 1.8rem;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
     margin: 0;
 }
 
